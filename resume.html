@@ -1,0 +1,104 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+        }
+        .contact-info {
+            margin-top: 20px;
+        }
+        .summary {
+            margin-top: 20px;
+        }
+        .section {
+            margin-top: 20px;
+        }
+        .section-header {
+            font-weight: bold;
+        }
+        .bullet-points {
+            margin-left: 20px;
+        }
+
+        
+        @media print {
+            .no-print {
+                display: none !important;
+                visibility: hidden !important;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <div class="header">
+        <h1>{{user_profile.name}}</h1>
+        <div class="contact-info">
+            <p>Phone: {{user_profile.phone}} | Email: {{user_profile.email}}</p>
+        </div>
+    </div>
+    <hr>
+    <br>
+    <div class="summary">
+        <h2>Summary</h2>
+        <p>{{user_profile.summary}}</p>
+    </div>
+    <hr>
+    <br>
+    <div class="section">
+        <h2 class="section-header">Education</h2>
+        <p><strong>Degree:</strong> {{user_profile.degree}}</p>
+        <p><strong>University:</strong> {{user_profile.university}}</p>
+        <!-- <p><strong>Duration:</strong> [Month Year] - [Month Year]</p> -->
+    </div>
+    <hr>
+    <br>
+    <div class="section">
+        <h2 class="section-header">Experience</h2>
+        <p>{{user_profile.experience}}</p>
+        <!-- <p><strong>Company:</strong> [Company Name], [City, State]</p>
+        <p><strong>Duration:</strong> [Month Year] - [Month Year]</p>
+        <div class="bullet-points">
+            <p>- [Bullet point describing your responsibilities and achievements]</p>
+            <p>- [Another bullet point]</p>
+            Add more bullet points as needed -->
+        </div>
+    </div>
+    <hr>
+    <br>
+    <div class="section">
+        <h2 class="section-header">Skills</h2>
+        <!-- <ul class="bullet-points">
+            <li>[Skill 1]</li>
+            <li>[Skill 2]</li>
+            <li>[Skill 3]</li>
+            Add more skills as needed 
+        </ul> -->
+        <p>{{user_profile.skills}}</p>
+    </div>
+    <hr>
+    <br>
+    <div class="contact-info">
+        <p>Phone: {{user_profile.phone}} | Email: {{user_profile.email}} </p>
+    </div>
+
+    <div class="no-print" style="text-align: center;">
+    <button  style="background-color: gray; color: white; text-align: center; padding: 10px 20px; font-size: large; border-radius: 10px;" onclick="window.history.back()">
+        Back
+    </button>
+    </div>
+
+
+</body>
+</html>
